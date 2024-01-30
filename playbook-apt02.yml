@@ -1,0 +1,11 @@
+- name : our first play
+  hosts: planetexpress
+  connection: ansible.builtin.ssh
+  gather_facts: true 
+
+  tasks: 
+    - name: install steam locaomotive on all machines 
+      ansible.builtin.apt: 
+        name: sl
+        state: present
+      become: yes
