@@ -1,4 +1,3 @@
----
 - name: Loop over packages to install
   hosts: raiders
   gather_facts: yes
