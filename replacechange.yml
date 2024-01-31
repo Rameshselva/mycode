@@ -11,6 +11,7 @@
         path: "{{ fileloc }}"
         regexp: "^Setting up lib.*"
         replace: "REDACTED BY ANSIBLE replace module"
-        backup: yes
+        backup: true
+      register: lineresults
       become: true
 
