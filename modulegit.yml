@@ -1,0 +1,11 @@
+- name: learning how to use git 
+  hosts: planetexpress
+  connection: ssh
+  gather_facts: false
+
+  tasks: 
+    - name: create a git archinve from repository
+      ansible.builtin.git:
+        repo: https://github.com/ansible/ansible-examples.git
+        dest: ~/ansible-examples/
+        archive: /tmp/ansible-example.zip
