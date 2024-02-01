@@ -1,0 +1,15 @@
+- name: Turn off logging at play book level
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  no_log: true
+  tasks:
+    - name: Perform an APRI lookup
+      uri: 
+          url: "https://api.le-systeme-solaire.net/rest/bodies/neso"
+          method: GET
+      register: results 
+
+    - name: Debug task left in by a developer for debugging 
+      debug: 
+          var: results    

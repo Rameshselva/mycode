@@ -1,0 +1,14 @@
+- name: Logging 
+  hosts: localhost
+  connection: localhost
+  gather_facts: no
+
+  tasks: 
+    - name: First debug
+      debug:
+        msg: "the first messages in the playbook"
+      no_logs: true
+ 
+    - name: second debug
+      debug: 
+        msg: "The second in the playbook"   
